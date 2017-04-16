@@ -9,7 +9,6 @@
         //var xhr = new ActiveXObject("Microsoft.XMLHTTP");
         var xhr = new XMLHttpRequest();
         function sendMsg() {
-            debugger;
             var name = document.getElementById('name').value;
             //服务的地址
             var wsUrl = 'http://localhost:8900/hello';
@@ -30,7 +29,6 @@
         function _back() {
             if (xhr.readyState == 4) {
                 if (xhr.status == 200) {
-                    debugger;
                     //alert('调用Webservice成功了');
                     var ret = xhr.responseXML;
                     var msg = ret.getElementsByTagName('return')[0];
